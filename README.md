@@ -7,7 +7,7 @@ This extension will take all of your Auth0 logs and export them to CloudWatch.
 ## Installation
 
 1. Open the Auth0 Dashboard for the tenant for which you wish to install this extension.
-2. Click the 'Create Extension' button and provide the URL to [https://github.com/TDG-Platform/auth0-logs-to-cloudwatch]().
+2. Click the 'Create Extension' button and provide the URL to [https://github.com/PowerDMS/auth0-logs-to-cloudwatch]().
 3. Configure the extension with the AWS Access Key, AWS Secret Key, and Log Group Name (i.e. 'auth0') *
 4. You can optionally filter log events in the configuration as well.  See the [Filters](#filters) section below.
 
