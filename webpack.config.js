@@ -4,6 +4,7 @@ var Webpack       = require('webpack');
 var _             = require('lodash');
 var pkg           = require('./package.json');
 var WebpackOnBuildPlugin = require('on-build-webpack');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 var fs  = require('fs');
 
 var LIST_MODULES_URL = 'https://webtask.it.auth0.com/api/run/wt-tehsis-gmail_com-1?key=eyJhbGciOiJIUzI1NiIsImtpZCI6IjIifQ.eyJqdGkiOiJmZGZiOWU2MjQ0YjQ0YWYyYjc2YzAwNGU1NjgwOGIxNCIsImlhdCI6MTQzMDMyNjc4MiwiY2EiOlsiZDQ3ZDNiMzRkMmI3NGEwZDljYzgwOTg3OGQ3MWQ4Y2QiXSwiZGQiOjAsInVybCI6Imh0dHA6Ly90ZWhzaXMuZ2l0aHViLmlvL3dlYnRhc2tpby1jYW5pcmVxdWlyZS90YXNrcy9saXN0X21vZHVsZXMuanMiLCJ0ZW4iOiIvXnd0LXRlaHNpcy1nbWFpbF9jb20tWzAtMV0kLyJ9.MJqAB9mgs57tQTWtRuZRj6NCbzXxZcXCASYGISk3Q6c';
@@ -50,7 +51,8 @@ module.exports = {
   }),
   plugins: [
     new Webpack.optimize.DedupePlugin(),
-    new Webpack.NoErrorsPlugin()
+    new Webpack.NoErrorsPlugin(),
+    new UglifyJSPlugin()
   ],
   resolve: {
     modulesDirectories: ['node_modules'],

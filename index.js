@@ -89,7 +89,6 @@ function lastLogCheckpoint(req, res) {
         };
 
         context.logs = context.logs
-          .filter(l => l.type !== 'sapi' && l.type !== 'fapi')
           .filter(log_matches_level)
           .filter(log_matches_types);
 
@@ -292,10 +291,12 @@ const logTypes = {
     level: 3 // Error
   },
   'sapi': {
-    event: 'API Operation'
+    event: 'API Operation',
+    level: 1 // Info
   },
   'fapi': {
-    event: 'Failed API Operation'
+    event: 'Failed API Operation',
+    level: 3 // Error
   },
   'limit_wc': {
     event: 'Blocked Account',
