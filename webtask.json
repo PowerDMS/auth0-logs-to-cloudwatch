@@ -5,7 +5,7 @@
   "author": "saltuk, bbeck",
   "description": "This extension will take all of your Auth0 logs and export them to AWS CloudWatch",
   "type": "cron",
-  "repository": "https://github.com/cyrus-mc/auth0-logs-to-cloudwatch",
+  "repository": "https://github.com/PowerDMS/auth0-logs-to-cloudwatch",
   "keywords": [
     "auth0",
     "extension"
